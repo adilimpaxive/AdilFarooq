@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeFragment">
+
+    <include
+        android:id="@+id/news_includer"
+        layout="@layout/news_layout"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/payment_history_includer"/>
+
+    <include
+        android:id="@+id/payment_history_includer"
+        layout="@layout/payment_history_layout"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="@+id/news_includer"
+        app:layout_constraintEnd_toEndOf="@+id/news_includer"
+        app:layout_constraintTop_toBottomOf="@+id/news_includer"/>
+
+    <include
+        android:id="@+id/govt_services_includer"
+        layout="@layout/govt_service_layout"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="@+id/payment_history_includer"
+        app:layout_constraintEnd_toEndOf="@+id/payment_history_includer"
+        app:layout_constraintTop_toBottomOf="@+id/payment_history_includer"
+        app:layout_constraintBottom_toTopOf="@+id/other_services_includer"/>
+
+    <include
+        android:id="@+id/other_services_includer"
+        layout="@layout/other_services_layout"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="@+id/govt_services_includer"
+        app:layout_constraintEnd_toEndOf="@+id/govt_services_includer"
+        app:layout_constraintTop_toBottomOf="@+id/govt_services_includer"/>
+
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:menu="@menu/home_fragment_bottom_menu"
+        app:itemBackground="@android:color/transparent"
+        app:itemTextColor="@color/bottom_nav_item_selected"
+        app:itemIconTint="@color/bottom_nav_item_selected"
+        app:itemRippleColor="@color/bottom_nav_item_selected"
+        android:background="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

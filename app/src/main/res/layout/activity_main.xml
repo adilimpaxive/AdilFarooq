@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_includer"
+            layout="@layout/toolbar"
+            app:layout_constraintStart_toStartOf="@+id/main_layout"
+            app:layout_constraintEnd_toEndOf="@+id/main_layout"
+            app:layout_constraintTop_toTopOf="@+id/main_layout"/>
+
+        <ScrollView
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="@+id/main_layout"
+            app:layout_constraintEnd_toEndOf="@+id/main_layout"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_includer"
+            app:layout_constraintBottom_toBottomOf="@+id/main_layout"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Navigation View -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/nav_header_layout"
+        app:menu="@menu/nav_drawer_menu"
+        android:layout_gravity="start"
+        android:background="@color/colorLightDarkBlack"
+        app:itemTextColor="@android:color/white"
+        app:itemIconTint="@android:color/white"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

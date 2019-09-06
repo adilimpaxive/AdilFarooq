@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Adil Farooqi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="services">Service</string>
+    <string name="close">Close</string>
+    <string name="open">Open</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="news">News</string>
+    <string name="lorem">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</string>
+    <string name="payment_history_label">Payment History</string>
+    <string name="payment_history"><![CDATA[Payment\nHistory]]></string>
+    <string name="govt_job">Working with\n Government</string>
+    <string name="vehicle"><![CDATA[Vehicle &\n Transport]]></string>
+    <string name="property"><![CDATA[Housing &\n Property]]></string>
+    <string name="media">Media</string>
+    <string name="govt_services_tv">Government Services</string>
+    <string name="other_services">Other Services</string>
+    <string name="utility"><![CDATA[Utility & Bills]]></string>
+    <string name="medicine">Medicine App</string>
+    <string name="sharjah_library">Sharjah Library</string>
+</resources>
